@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Tabs Anonymous",
+  "version": "0.2.0",
+  "description": "Make room for what matters. Tab budgets, sponsor approval, and ephemeral tabs.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "settings.html",
+  "commands": {
+    "ephemeral": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open a temporary tab"
+    }
+  }
+}
